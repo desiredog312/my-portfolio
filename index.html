@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kenneth Johannes Phan — Portofolio Software Engineer</title>
+<meta name="description" content="Portofolio Kenneth Johannes Phan, Junior Web Developer berbasis PHP &amp; Laravel.">
+<meta name="theme-color" content="#0B1220">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%230B1220'/%3E%3Crect x='3' y='3' width='58' height='58' rx='8' fill='none' stroke='%23E8B84B' stroke-width='3'/%3E%3Ctext x='32' y='42' font-family='monospace' font-size='26' font-weight='600' text-anchor='middle' fill='%23E8B84B'%3EKP%3C/text%3E%3C/svg%3E">
+
+<script>
+  /* Prevents a flash of Indonesian text for visitors who already picked English.
+     The storage key must match STORAGE_KEY in assets/js/i18n.js. */
+  (function () {
+    try {
+      var q = new URLSearchParams(location.search).get('lang');
+      var l = (q === 'en' || q === 'id') ? q : localStorage.getItem('portfolio-lang');
+      if (l === 'en') {
+        document.documentElement.classList.add('lang-pending');
+        setTimeout(function () { document.documentElement.classList.remove('lang-pending'); }, 2500);
+      }
+    } catch (e) {}
+  })();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="90" tabindex="0">
+
+<!-- ============ NAV ============ -->
+<nav class="navbar navbar-expand-lg fixed-top schema-nav" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="#top">
+      <span class="brand-mark">KP</span><span class="brand-text">Kenneth<span class="dim">.dev</span></span>
+    </a>
+
+    <!-- Language switcher (ID is the default; the choice is remembered in localStorage) -->
+    <div class="lang-switch order-lg-3 ms-auto ms-lg-3 me-2 me-lg-0" role="group" aria-label="Pilih bahasa" data-i18n-attr="aria-label:lang.group">
+      <button type="button" data-lang="id" lang="id" title="Bahasa Indonesia" aria-pressed="true">ID</button>
+      <button type="button" data-lang="en" lang="en" title="English" aria-pressed="false">EN</button>
+    </div>
+
+    <button class="navbar-toggler order-lg-4" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" aria-controls="navContent" aria-expanded="false" aria-label="Menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end order-lg-2" id="navContent">
+      <ul class="navbar-nav gap-lg-2">
+        <li class="nav-item"><a class="nav-link" href="#about"><span class="nav-idx">01</span><span data-i18n="nav.about">Tentang</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#experience"><span class="nav-idx">02</span><span data-i18n="nav.experience">Pengalaman</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects"><span class="nav-idx">03</span><span data-i18n="nav.projects">Proyek</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact"><span class="nav-idx">04</span><span data-i18n="nav.contact">Kontak</span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header id="top" class="hero">
+  <div class="blueprint-grid"></div>
+  <div class="container hero-inner">
+    <div class="row align-items-center">
+      <div class="col-lg-7" data-aos="fade-up">
+        <div class="eyebrow">TABLE 00 — PROFILE</div>
+        <h1 class="hero-title">Kenneth Johannes Phan</h1>
+        <p class="hero-role">S.Kom. — Junior Web Developer</p>
+        <p class="hero-tagline" data-i18n="hero.tagline">Merancang sistem web modular yang menghubungkan kebutuhan bisnis dengan teknologi.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-accent" data-i18n="hero.ctaProjects">Lihat Proyek</a>
+          <a href="#contact" class="btn btn-outline-line" data-i18n="hero.ctaContact">Hubungi Saya</a>
+        </div>
+      </div>
+      <div class="col-lg-5" data-aos="fade-up" data-aos-delay="150">
+        <div class="profile-photo-frame">
+          <img src="assets/img/profile.jpg" width="800" height="1000" decoding="async" alt="Foto profil Kenneth Johannes Phan" data-i18n-attr="alt:hero.photoAlt" class="profile-photo">
+        </div>
+        <div class="schema-card hero-card">
+          <div class="schema-card-head">
+            <span class="dot"></span>
+            <span>profile.json</span>
+          </div>
+          <ul class="field-list">
+            <li><span class="field-key">location</span><span class="field-val">Surabaya, Indonesia</span></li>
+            <li><span class="field-key">stack</span><span class="field-val">PHP, Laravel, MySQL</span></li>
+            <li><span class="field-key">focus</span><span class="field-val" data-i18n="hero.focus">Sistem Informasi Bisnis</span></li>
+            <li><span class="field-key">status</span><span class="field-val text-accent">open to work</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-cue" aria-hidden="true"><span></span></div>
+</header>
+
+<main>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="section-head" data-aos="fade-up">
+      <span class="eyebrow" data-i18n="about.eyebrow">TABLE 01 — TENTANG</span>
+      <h2 data-i18n="about.title">Ringkasan Profesional</h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-7" data-aos="fade-up">
+        <p class="lead-text" data-i18n="about.text">Lulusan Sistem Informasi Bisnis dengan pemahaman kuat dalam analisis proses bisnis, pengelolaan data, dan penerapan teknologi informasi untuk mendukung pengambilan keputusan strategis. Terbiasa bekerja dengan sistem basis data, analisis data, dan perancangan solusi digital yang menjembatani kebutuhan bisnis dengan teknologi. Memiliki kemampuan analitis, pemecahan masalah, serta komunikasi yang baik untuk berkolaborasi lintas divisi — mulai dari tim IT hingga manajemen bisnis. Antusias mengembangkan diri di bidang analisis sistem, manajemen proyek TI, maupun transformasi digital perusahaan.</p>
+      </div>
+      <div class="col-lg-5" data-aos="fade-up" data-aos-delay="100">
+        <div class="schema-card">
+          <div class="schema-card-head"><span class="dot"></span><span data-i18n="about.eduHead">pendidikan</span></div>
+          <ul class="field-list">
+            <li>
+              <span class="field-key" data-i18n="edu.s1.level">S1</span>
+              <span class="field-val" data-i18n="edu.s1.name">Sistem Informasi Bisnis, iSTTS — 2026</span>
+            </li>
+            <li>
+              <span class="field-key" data-i18n="edu.sma.level">SMA</span>
+              <span class="field-val">SMAK St. Hendrikus — 2021</span>
+            </li>
+            <li>
+              <span class="field-key" data-i18n="edu.smp.level">SMP</span>
+              <span class="field-val">SMP Kristen Gloria II — 2018</span>
+            </li>
+            <li>
+              <span class="field-key" data-i18n="edu.sd.level">SD</span>
+              <span class="field-val">SD Kristen Gloria II — 2015</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-4 mt-2">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="schema-card h-100">
+          <div class="schema-card-head"><span class="dot"></span><span data-i18n="skills.prog">Bahasa Pemrograman</span></div>
+          <div class="chip-row">
+              <span class="chip">PHP</span>
+              <span class="chip">Laravel</span>
+              <span class="chip">MySQL</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="schema-card h-100">
+          <div class="schema-card-head"><span class="dot"></span><span>Tools</span></div>
+          <div class="chip-row">
+              <span class="chip">Visual Studio Code</span>
+              <span class="chip">Git</span>
+              <span class="chip">Microsoft Excel</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="schema-card h-100">
+          <div class="schema-card-head"><span class="dot"></span><span data-i18n="skills.lang">Bahasa</span></div>
+          <div class="chip-row">
+              <span class="chip" data-i18n="skills.langId">Bahasa Indonesia</span>
+              <span class="chip" data-i18n="skills.langEn">Bahasa Inggris</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section id="experience" class="section section-alt">
+  <div class="container">
+    <div class="section-head" data-aos="fade-up">
+      <span class="eyebrow" data-i18n="exp.eyebrow">TABLE 02 — PENGALAMAN</span>
+      <h2 data-i18n="exp.title">Pengalaman Kerja</h2>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item" data-aos="fade-up">
+        <div class="timeline-marker"></div>
+        <div class="schema-card">
+          <div class="schema-card-head">
+            <span class="dot"></span>
+            <span>Junior Web Developer · Kumon Putro Agung</span>
+            <span class="period" data-i18n="exp.period">Agustus 2025 — Juni 2026</span>
+          </div>
+          <p class="card-summary" data-i18n="exp.summary">Merancang dan mengembangkan sistem internal berbasis web menggunakan Laravel untuk mendukung operasional lembaga bimbingan belajar, mencakup lebih dari 25 modul fungsional.</p>
+          <ul class="point-list">
+            <li data-i18n="exp.p1">Membangun sistem autentikasi multi-peran (admin, staf, asisten pengajar, orang tua) lengkap dengan 2FA dan reset password otomatis via email.</li>
+            <li data-i18n="exp.p2">Mengembangkan modul presensi siswa, staf, dan asisten, jadwal pengganti, serta penilaian tugas dan sikap belajar.</li>
+            <li data-i18n="exp.p3">Membangun modul keuangan meliputi invoice, bukti pembayaran, dan payroll untuk mengotomatisasi proses manual.</li>
+            <li data-i18n="exp.p4">Mengintegrasikan fitur impor/ekspor data siswa berbasis Excel untuk pengelolaan data dalam jumlah besar.</li>
+            <li data-i18n="exp.p5">Mengimplementasikan notifikasi email otomatis (tagihan jatuh tempo, jadwal pengganti, akun terkunci).</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section id="projects" class="section">
+  <div class="container">
+    <div class="section-head" data-aos="fade-up">
+      <span class="eyebrow" data-i18n="proj.eyebrow">TABLE 03 — PROYEK</span>
+      <h2 data-i18n="proj.title">Modul &amp; Proyek</h2>
+      <p class="section-sub" data-i18n="proj.sub">Sebagian modul yang dirancang dan dikembangkan dalam sistem internal Kumon Putro Agung.</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="0">
+        <div class="schema-card project-card h-100">
+          <div class="schema-card-head">
+            <span class="proj-id">#01</span>
+            <span data-i18n="proj.1.name">Sistem Autentikasi Multi-Peran</span>
+          </div>
+          <p class="card-summary" data-i18n="proj.1.desc">Login terpisah untuk admin, staf, asisten pengajar, dan orang tua, dengan verifikasi dua faktor dan reset password otomatis lewat email.</p>
+          <ul class="field-list field-list-mono">
+              <li data-i18n="proj.1.row1">role : admin · staf · asisten · orang tua</li>
+              <li>auth : 2FA + reset via email</li>
+              <li>status : production</li>
+          </ul>
+          <div class="chip-row">
+              <span class="chip chip-sm">Laravel</span>
+              <span class="chip chip-sm">MySQL</span>
+              <span class="chip chip-sm">2FA</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="schema-card project-card h-100">
+          <div class="schema-card-head">
+            <span class="proj-id">#02</span>
+            <span data-i18n="proj.2.name">Modul Presensi &amp; Jadwal</span>
+          </div>
+          <p class="card-summary" data-i18n="proj.2.desc">Pencatatan presensi siswa, staf, dan asisten, pengelolaan jadwal pengganti, serta penilaian tugas dan sikap belajar.</p>
+          <ul class="field-list field-list-mono">
+              <li data-i18n="proj.2.row1">entitas : siswa · staf · asisten</li>
+              <li data-i18n="proj.2.row2">fitur : jadwal pengganti</li>
+              <li>status : production</li>
+          </ul>
+          <div class="chip-row">
+              <span class="chip chip-sm">Laravel</span>
+              <span class="chip chip-sm">MySQL</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="0">
+        <div class="schema-card project-card h-100">
+          <div class="schema-card-head">
+            <span class="proj-id">#03</span>
+            <span data-i18n="proj.3.name">Modul Keuangan</span>
+          </div>
+          <p class="card-summary" data-i18n="proj.3.desc">Invoice, bukti pembayaran, dan payroll otomatis — menggantikan proses pencatatan manual lembaga.</p>
+          <ul class="field-list field-list-mono">
+              <li data-i18n="proj.3.row1">entitas : invoice · pembayaran · payroll</li>
+              <li data-i18n="proj.3.row2">output : notifikasi jatuh tempo</li>
+              <li>status : production</li>
+          </ul>
+          <div class="chip-row">
+              <span class="chip chip-sm">Laravel</span>
+              <span class="chip chip-sm">MySQL</span>
+              <span class="chip chip-sm">PDF</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="schema-card project-card h-100">
+          <div class="schema-card-head">
+            <span class="proj-id">#04</span>
+            <span data-i18n="proj.4.name">Impor / Ekspor Data Excel</span>
+          </div>
+          <p class="card-summary" data-i18n="proj.4.desc">Migrasi dan sinkronisasi data siswa dalam jumlah besar melalui berkas Excel, mengurangi input manual.</p>
+          <ul class="field-list field-list-mono">
+              <li>format : .xlsx</li>
+              <li data-i18n="proj.4.row2">volume : data siswa massal</li>
+              <li>status : production</li>
+          </ul>
+          <div class="chip-row">
+              <span class="chip chip-sm">Laravel</span>
+              <span class="chip chip-sm">PhpSpreadsheet</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="section section-alt">
+  <div class="container">
+    <div class="section-head" data-aos="fade-up">
+      <span class="eyebrow" data-i18n="contact.eyebrow">TABLE 04 — KONTAK</span>
+      <h2 data-i18n="contact.title">Hubungi Saya</h2>
+      <p class="section-sub" data-i18n="contact.sub">Terbuka untuk peluang kerja, kolaborasi proyek, maupun sekadar berdiskusi soal sistem &amp; data.</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-lg-5" data-aos="fade-up">
+        <div class="schema-card">
+          <div class="schema-card-head"><span class="dot"></span><span>contact.json</span></div>
+          <!-- These are PUBLIC contact details shown on the page. Delete any <li> to hide it. -->
+          <ul class="field-list">
+            <li><span class="field-key">email</span><span class="field-val"><a href="mailto:kjohannesphan@gmail.com">kjohannesphan@gmail.com</a></span></li>
+            <li><span class="field-key">phone</span><span class="field-val">0895-2978-5106</span></li>
+            <li><span class="field-key">linkedin</span><span class="field-val"><a href="https://linkedin.com/in/kennethjohannesphan" target="_blank" rel="noopener">linkedin.com/in/kennethjohannesphan</a></span></li>
+            <li><span class="field-key" data-i18n="contact.location">lokasi</span><span class="field-val">Surabaya, Indonesia</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
+        <form id="contactForm" class="schema-card contact-form" novalidate>
+          <div class="schema-card-head"><span class="dot"></span><span data-i18n="contact.formHead">kirim_pesan()</span></div>
+
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label" for="name" data-i18n="form.name">Nama</label>
+              <input type="text" class="form-control" id="name" name="name" maxlength="100" autocomplete="name" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label" for="email">Email</label>
+              <input type="email" class="form-control" id="email" name="email" maxlength="150" autocomplete="email" required>
+            </div>
+            <div class="col-12">
+              <label class="form-label" for="subject" data-i18n="form.subject">Subjek</label>
+              <input type="text" class="form-control" id="subject" name="subject" maxlength="150" required>
+            </div>
+            <div class="col-12">
+              <label class="form-label" for="message" data-i18n="form.message">Pesan</label>
+              <textarea class="form-control" id="message" name="message" rows="4" maxlength="3000" required></textarea>
+            </div>
+            <div class="col-12">
+              <!-- Sent to EmailJS as {{visitor_lang}} so you know which language to reply in. -->
+              <input type="hidden" name="visitor_lang" value="id">
+              <button type="submit" class="btn btn-accent w-100 w-md-auto" id="submitBtn" data-i18n="form.send">Kirim Pesan</button>
+              <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+    <span>&copy; <span id="year">2026</span> Kenneth Johannes Phan. <span data-i18n="footer.built">Dibangun dengan HTML, Bootstrap &amp; EmailJS.</span></span>
+    <a href="#top" class="back-to-top" data-i18n="footer.top">Kembali ke atas ↑</a>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4.4.1/dist/email.min.js"></script>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/script.js"></script>
+</body>
+</html>

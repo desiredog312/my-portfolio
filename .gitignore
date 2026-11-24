@@ -1,0 +1,15 @@
+# Never commit credentials or leftovers from the old PHP version
+.env
+.env.*
+mail_config.php
+messages.log
+*.log
+*.zip
+*.php
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+node_modules/
